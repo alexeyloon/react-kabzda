@@ -1,6 +1,10 @@
 import React from "react";
 
- function PageTitle(props:any) {
+type PageTitlePropsType = {
+    title:string
+}
+
+ function PageTitle(props:PageTitlePropsType) {
     console.log("PageTitle renderig");
     return (
       <h1> { props.title } </h1>
