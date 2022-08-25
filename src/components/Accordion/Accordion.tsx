@@ -7,38 +7,33 @@ type AccordionPropsType = {
 
 function Accordion(props: AccordionPropsType) {
     console.log("Accordion renderig");
-    if (props.collapsed) {
-        return <div>
-            <AccordionTitle title={props.titleValue}/>
-        </div>
 
-    } else {
-        return <div>
-            <AccordionTitle title={props.titleValue}/>
-            <AccordionBody/>
-        </div>
-    }
+    return <div>
+        <AccordionTitle title={props.titleValue}/>
+        {!props.collapsed && <AccordionBody/>}
+    </div>
 }
 
-    type AccordionTitlePropsType = {
-        title: string
-    }
 
-    function AccordionTitle(props: AccordionTitlePropsType) {
-        console.log("AccordionTitle renderig");
-        return <h3>{props.title}</h3>
-    }
+type AccordionTitlePropsType = {
+    title: string
+}
 
-    function AccordionBody() {
-        console.log("AccordionBody renderig");
-        return (
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-            </ul>
-        )
-    }
+function AccordionTitle(props: AccordionTitlePropsType) {
+    console.log("AccordionTitle renderig");
+    return <h3>{props.title}</h3>
+}
 
-    export default Accordion;
+function AccordionBody() {
+    console.log("AccordionBody renderig");
+    return (
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    )
+}
+
+export default Accordion;
