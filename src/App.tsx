@@ -10,7 +10,7 @@ import UnControlledRating from "./components/UnControlledRating/Rating";
 function App() {
     console.log("App rendering");
     return (
-        <div>
+        <div className={"App"}>
             {/*<Accordion titleValue={"Menu"} collapsed={false}/>*/}
             {/*<Accordion titleValue={"Users"} collapsed={true}/>*/}
 
