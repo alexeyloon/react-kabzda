@@ -5,7 +5,7 @@ type RatingPropsType = {
 }
 
 function Rating(props: RatingPropsType) {
-    console.log("Rating renderig");
+    console.log("Rating rendering");
 
     return (
         <div>
@@ -18,7 +18,7 @@ function Rating(props: RatingPropsType) {
 }
 
 function Star(props: any) {
-    console.log("Star renderig");
+    console.log("Star rendering");
     if (props.selected === true) {
         return (
             <span><b>star </b></span>
